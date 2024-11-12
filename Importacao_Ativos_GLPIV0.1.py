@@ -75,23 +75,23 @@ def criar_arquivo_excel(dados, caminho_arquivo):
     # Preenchendo dados
     for computador in dados:
         linha = [
-            computador.get('name'),
-            computador.get('otherserial'),
-            computador.get('serial'),
-            computador.get('id'),
-            "Computador",
+            computador.get('name'), #Nome
+            computador.get('otherserial'), #Etiqueta
+            computador.get('serial'), #Serial
+            computador.get('otherserial'), #ID do GLPI Ref code
+            "Estações de Trabalho", #Tipo de estação
             "",
-            computador.get('locations_id'),
-            computador.get('states_id'),
-            computador.get('manufacturers_id'),
+            computador.get('locations_id'), #Localização
+            computador.get('states_id'), #status
+            computador.get('manufacturers_id'), #Fabricante
+            computador.get('manufacturers_id'), #Marca
+            computador.get('computermodels_id'), #Modelo do Computador
+            computador.get('groups_id'), #tags
             "",
-            computador.get('computermodels_id'),
-            computador.get('groups_id'),
             "",
             "",
-            "",
-            computador.get('computertypes_id'),
-            computador.get('contact')
+            computador.get('contact'), #Descrição
+            computador.get('contact_num') #Utilizado por
         ]
         sheet.append(linha)
 
